@@ -3,9 +3,9 @@ Options FollowSymLinks
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /cms_designaciones_federales/index.php/$1 [L]
+    RewriteRule ^(.*)$ /MyApiToDoList/index.php/$1 [L]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
-    ErrorDocument 404 /cms_designaciones_federales/index.php
+    ErrorDocument 404 /MyApiToDoList/index.php
 </IfModule>
