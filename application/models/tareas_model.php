@@ -9,8 +9,10 @@ class Tareas_model extends CI_Model {
 
     public function get() {
         $this->db->select('id,titulo,descripcion,urgente');
-        $etapa = $this->db->get('tareas');
-        return $etapa->row_array();
+        $this->db->order_by('urgente', 'DESC');
+        $this->db->where('status', 1);
+        $data = $this->db->get('tareas');
+        return $data->result_array();
     }
 
     public function get_by_id($id) {
